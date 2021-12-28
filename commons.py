@@ -49,7 +49,7 @@ def get_model():
     optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, nesterov=True, weight_decay=0.0001)
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     
-    CHECK_POINT_PATH = '/Users/mac/PycharmProjects/Covid-19_Chest_Xray/weights/EfficientNet_B0_Covid-19.pth'
+    CHECK_POINT_PATH = '/Users/Apple386/PycharmProjects/Covid-19_Chest_Xray/weights/EfficientNet_B0_Covid-19.pth'
     
     checkpoint = torch.load(CHECK_POINT_PATH, map_location='cpu')
     model.load_state_dict(checkpoint['model_state_dict'])
